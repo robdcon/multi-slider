@@ -17,7 +17,8 @@ function slider()
 {
 	
 	
-	let slideLength = 200
+	let slideLength = $('.slide').eq(0)[0].offsetWidth 
+	console.log(slideLength)
 	let position = 0
 	
 	//console.log(slideLength)
@@ -36,25 +37,25 @@ function slider()
 		{
 			if($('.active').index() - 1 < 0)
 			{
-				position = slideLength * (length - 1 )
+				position = -(slideLength * (length - 1 )) 
 				
 				console.log("POS: ", position)
 				//console.log( $('.active').index() )
 
 				$('.active').removeClass('active')
 				slides.last().addClass('active')
-				$slideTrack.css('transform', 'translateX('+ position +')')
+				$slideTrack.css('transform', 'translateX('+ position +'px)')
 			}
 			else
 			{
 				
-				position = position - slideLength
+				position = position + slideLength
 				console.log("POS: ", position)
 				
 				//console.log( $('.active').index() )
 
 				$('.active').removeClass('active').prev().addClass('active')
-				$slideTrack.css('transform', 'translateX('+ position +')')
+				$slideTrack.css('transform', 'translateX('+ position +'px)')
 			}
 		},	
 			
@@ -71,18 +72,18 @@ function slider()
 
 				$('.active').removeClass('active')
 				slides.first().addClass('active')
-				$slideTrack.css('transform', 'translateX('+ position +')')
+				$slideTrack.css('transform', 'translateX('+ position +'px)')
 				
 			}
 			else
 			{
-				position = position + slideLength
+				position = position - slideLength
 				
 				 console.log("POS: ", position)
 				//console.log( $('.active').index() )
 
 				$('.active').removeClass('active').next().addClass('active')
-				$slideTrack.css('transform', 'translateX('+ position +')')
+				$slideTrack.css('transform', 'translateX('+ position +'px)')
 			}
 		},
 		getPos: () => {return position},

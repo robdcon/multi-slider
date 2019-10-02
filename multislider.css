@@ -1,7 +1,7 @@
 *
 {
     box-sizing:border-box;
-    transition:all 2s;
+    transition:all 1s;
 }
 
 div
@@ -18,7 +18,7 @@ div
 
 .slide.active
 {
-   
+   transform: scale(1.2);
 }
 
 .multislider-container
@@ -34,7 +34,7 @@ div
     margin: 0 auto;
     background-color:#ff000050;
     border: 2px solid #ff0000;
-    overflow: hidden;
+   /* overflow: hidden;*/
 }
 
 .slide-container-inner
