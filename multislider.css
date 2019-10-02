@@ -1,0 +1,56 @@
+*
+{
+    box-sizing:border-box;
+    transition:all 2s;
+}
+
+div
+{
+    border: 1px solid #00000080;
+    
+}
+
+.slide 
+{
+    
+
+}
+
+.slide.active
+{
+   
+}
+
+.multislider-container
+{
+    height: 200px;
+    width:100%;
+}
+
+.slide-container
+{
+    height: 100%;
+    width:200px;
+    margin: 0 auto;
+    background-color:#ff000050;
+    border: 2px solid #ff0000;
+    overflow: hidden;
+}
+
+.slide-container-inner
+{
+    height: 100%;
+    width:600px;
+    display:flex;
+    background-color:#00ff0050;
+}
+
+.controls-container
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    color:#000;
+    background-color:#00000050;
+}
